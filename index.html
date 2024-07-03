@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>NJ Blog</title>
+    <link rel = "stylesheet" href="style.css">
+    <link href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel = 'stylesheet'>
+</head>
+<body>
+    <div class = "container">
+        <div class = "sidebar">
+            <div class = fixed-sidebar>
+                <div class = "avatar">
+                    <img src = "./image/avatar.jpg">
+                </div>
+                <h3>Feng Dian Su ( NJ )</h3>
+                <ul class = "list">
+                    <li><a href = "index.html" style = "padding-right: 137px">About Me</a></li>
+                    <li><a href = "blog.html" style = "padding-right: 178px">Blog</a></li>
+                    <li><a href = "#" onclick = "scrollToProject()" style = "padding-right: 157px">Project</a></li>
+                    <li><a href = "#" onclick = "scrollToLink()" style = "padding-right: 179px">Link</a></li>
+                </ul>
+                <h3 style = "margin-left:38px;">Contact</h3>
+                <div class = "icon">
+                    <a href = "https://www.facebook.com/profile.php?id=100026887234445">
+                        <img src = "./image/fb_icon.jpg" class = "info-icon">
+                    </a><div style = "margin-left:20px;"></div>
+                    <a href = "https://www.instagram.com/sj1036813">
+                        <img src = "./image/ig_icon.png" class = "info-icon">
+                    </a><div style = "margin-left:20px;"></div>
+                    <a href = "https://www.discordapp.com/users/1015604646666043444">
+                        <img src = "./image/dc_icon.jpg" class = "info-icon">
+                    </a><div style = "margin-left:20px;"></div>
+                    <a href = "https://github.com/FengDian-Su">
+                        <img src = "./image/github_icon.png" class = "info-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class = "content">
+            <div class = "greeting">
+                <h1>Hi there, this is NJ.</h1>
+                <p>這是我自己手刻的個人網站，歡迎參觀 ~</p><!--This is my personal website.-->
+                <div class = "line" style = "margin-top:20px;"></div>
+            </div>
+            <div class = "about">
+                <h2>About Me</h2>
+                <ul>
+                    <li>就讀中興大學資訊工程學系</li><!--NCHU, Computer Engineering-->
+                    <li>擔任 Google Developer Student Club (GDSC) 核心幹部</li><!--GDSC core team member (2022-2023)-->
+                    <li>114 級資工系學會成員</li><!--Student Association of Computer Engineering Department member-->
+                    <li>興趣是看小說和騎腳踏車</li><!--Love reading novel and cycling-->
+                </ul>
+            </div>
+            <div class = "about">
+                <h2>Experiences</h2>
+                <ul>
+                    <li>113 學年度國科會大專生研究計畫《》</li><!--Recipient of the Academic Excellence Award three times-->
+                    <li>112 學年資訊專題競賽 佳作</li>
+                    <li>與中興大學運動資訊管理研究室合作進行網站開發</li>
+                    <li>參與 2024 iThome 鐵人賽</li>
+                    <li>在學期間累計獲得三次書卷獎</li>
+                </ul>
+            </div>
+            <div class = "about">
+                <h2>Language & Skills</h2>
+                <img src = "https://skillicons.dev/icons?i=c,java,js,html,css,dart,fastapi,mysql,py,flask,arduino,git" style = "margin-top:10px;height:40px;">
+                <div style = "display: flex">
+                    <div class = "card">
+                        <h4>Web Design</h4>
+                        <p>Passionate about web design, learned through online tutorials, able to create simple Responsive Web Designs (RWD) and develop games using Javascript.</p>
+                    </div>
+                    <div class = "card">
+                        <h4>Flask / FastAPI</h4>
+                        <p>Learning how to connect front-end and back-end using Flask and FastAPI, currently exploring more advanced techniques.</p>
+                    </div>
+                </div>
+                <div style = "display: flex">
+                    <div class = "card">
+                        <h4>Database</h4>
+                        <p>Able to use basic MySQL syntax to manipulate databases, typically using SQLite in Python programs, and have personal projects.</p>
+                    </div>
+                    <div class = "card">
+                        <h4>AIoT</h4>
+                        <p>Have a basic understanding of Arduino, ESP32, and Raspberry Pi, capable of connecting hardware, sensors, server, and user devices, and applying AI technology to complete AIoT projects.</p>
+                    </div>
+                </div>
+                <div style = "display: flex">
+                    <div class = "card">
+                        <h4>Machine Learning</h4>
+                        <p>Understand the concepts of machine learning, with a basic knowledge of models such as random forest, CNN, and LSTM.</p>
+                    </div>
+                    <div class = "card">
+                        <h4>Nature Language Processing</h4>
+                        <p>This is my primary research area, including semantic recognition, information retrieval, and using the RAG framework to control LLM responses. I hope to continue researching in NLP.</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "about">
+                <h2 id = "project">Project</h2>
+                <ul>
+                    <li>Personal Website ( 2023 ~ ) :<br><br>
+                        Happy
+                    </li>
+                    <li>Slime and Ghost ( 2023 ) :</li>
+                    <li>Light novel DBMS ( 2023 ~ 2024 ) :</li>
+                    <li>Foreigner Legal QA System ( 2024 ) :</li>
+                    <li>AIoT project ( 2024 ) :</li>
+                    <li>Circuit Simulator ( 2024 ) :</li>
+                </ul>
+            </div>
+            <div class = "about">
+                <h2 id = "link">Link</h2>
+                <p>友站連結</p>
+                <ul>
+                    <li><a href = "https://hackmd.io/@baiyanchen8">牛頓力學大大</a></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <p>推薦網站</p>
+                <ul>
+                    <li><a href = "https://igouist.github.io/">伊果的沒人看筆記本</a></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
