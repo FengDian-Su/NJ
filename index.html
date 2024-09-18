@@ -1,133 +1,116 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="zh">
 <head>
-    <meta charset = "UTF-8">
-    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-    <title>NJ Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NJ</title>
     <link rel = "stylesheet" href="style.css">
-    <link href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel = 'stylesheet'>
 </head>
 <body>
-    <div class = "container">
-        <div class = "sidebar">
-            <div class = fixed-sidebar>
-                <div class = "avatar">
-                    <img src = "./image/avatar.jpg">
-                </div>
-                <h3>Feng Dian Su ( NJ )</h3>
-                <ul class = "list">
-                    <li><a href = "index.html" style = "padding-right: 137px">About Me</a></li>
-                    <li><a href = "blog.html" style = "padding-right: 178px">Blog</a></li>
-                    <li><a href = "#" onclick = "scrollToProject()" style = "padding-right: 157px">Project</a></li>
-                    <li><a href = "#" onclick = "scrollToLink()" style = "padding-right: 179px">Link</a></li>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-content">
+                <button class="logo" onclick = "window.location.href='blog.html';">Blog</button>
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <h3 style = "margin-left:38px;">Contact</h3>
-                <div class = "icon">
-                    <a href = "https://www.facebook.com/profile.php?id=100026887234445">
-                        <img src = "./image/fb_icon.jpg" class = "info-icon">
-                    </a><div style = "margin-left:20px;"></div>
-                    <a href = "https://www.instagram.com/sj1036813">
-                        <img src = "./image/ig_icon.png" class = "info-icon">
-                    </a><div style = "margin-left:20px;"></div>
-                    <a href = "https://www.discordapp.com/users/1015604646666043444">
-                        <img src = "./image/dc_icon.jpg" class = "info-icon">
-                    </a><div style = "margin-left:20px;"></div>
-                    <a href = "https://github.com/FengDian-Su">
-                        <img src = "./image/github_icon.png" class = "info-icon">
-                    </a>
-                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="flex-container">
+            <div class="image-container">
+                <img src="image/avatar.jpg" alt="示例圖片">
+            </div>
+            <div class="welcome-container">
+                <p class = "myname">Su Feng Dian（<span class="highlight"> NJ </span>）</p>
+                <p class="welcome-text">Hi, This is <span class="highlight">NJ</span></p>
+                <p class="welcome-text">Welcome to my personal website</p>
             </div>
         </div>
-        <div class = "content">
-            <div class = "greeting">
-                <h1>Hi there, this is NJ.</h1>
-                <p>這是我自己手刻的個人網站，歡迎參觀 ~</p><!--This is my personal website.-->
-                <div class = "line" style = "margin-top:20px;"></div>
+        <div class = "divider"></div>
+        <div class="list-container">
+            <h2 style = "font-size: 26px; margin-top: 50px" id="about">About me</h2>
+            <p>我是<span class="highlight"> NJ</span>，來自台南，目前就讀中興大學資工系四年級。</p>
+            <p>我的專題研究領域是<span class="highlight">自然語言處理</span>，也實做過如智慧物聯網、資料庫、編譯器、密碼學等其他領域的專案。因為對建置個人網頁很有興趣，所以自學了前端技術並部署到 GitHub 上面。</p>
+            <p>此外，我很喜歡追劇和看小說，平常沒事也會騎腳踏車到處晃晃，有機會的話可以揪我一起出來玩。</p>
+            <p>目前正在努力申請研究所，等到 11 月告一段落再更新最近的動態。</p>
+            <p style = "margin-top: 20px; margin-bottom: 10px"><strong>重要經歷</strong></p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Sep 2022</strong></td>
+                        <td>接任資工系學會幹部</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apr 2023</strong></td>
+                        <td>擔任 GDSC Dart 課程講師</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Jun 2024</strong></td>
+                        <td>畢業專題發表，同時獲得佳作</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>國科會大專生計畫審核通過</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aug 2024</strong></td>
+                        <td>IT 鐵人賽 30 天成功完賽</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nov 2024</strong></td>
+                        <td>完成專題論文</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="skills-container">
+            <h2 style = "font-size: 26px; margin-top: 50px" id="skills">Skills & GitHub Profile</h2>
+            <img src = "https://skillicons.dev/icons?i=c,java,js,html,css,dart,fastapi,mysql,py,flask,arduino,git" style = "margin-top:10px;height:40px;">
+            <div style = "margin-left: 0px; margin-top: 25px;">
+                <img src = "http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=FengDian-Su&theme=swift" style = "width: 400px;">
+                <img src = "http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=FengDian-Su&theme=swift" style = "width: 400px;">
             </div>
-            <div class = "about">
-                <h2>About Me</h2>
-                <ul>
-                    <li>就讀中興大學資訊工程學系</li><!--NCHU, Computer Engineering-->
-                    <li>擔任 Google Developer Student Club (GDSC) 核心幹部</li><!--GDSC core team member (2022-2023)-->
-                    <li>114 級資工系學會成員</li><!--Student Association of Computer Engineering Department member-->
-                    <li>興趣是看小說和騎腳踏車</li><!--Love reading novel and cycling-->
-                </ul>
+            <div>
+                <img src = "http://github-profile-summary-cards.vercel.app/api/cards/stats?username=FengDian-Su&theme=swift" style = "width: 400px;">
+                <img src = "http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=FengDian-Su&theme=swift&utcOffset=8" style = "width: 400px;">
             </div>
-            <div class = "about">
-                <h2>Experiences</h2>
-                <ul>
-                    <li>113 學年度國科會大專生研究計畫《》</li><!--Recipient of the Academic Excellence Award three times-->
-                    <li>112 學年資訊專題競賽 佳作</li>
-                    <li>與中興大學運動資訊管理研究室合作進行網站開發</li>
-                    <li>參與 2024 iThome 鐵人賽</li>
-                    <li>在學期間累計獲得三次書卷獎</li>
-                </ul>
-            </div>
-            <div class = "about">
-                <h2>Language & Skills</h2>
-                <img src = "https://skillicons.dev/icons?i=c,java,js,html,css,dart,fastapi,mysql,py,flask,arduino,git" style = "margin-top:10px;height:40px;">
-                <div style = "display: flex">
-                    <div class = "card">
-                        <h4>Web Design</h4>
-                        <p>Passionate about web design, learned through online tutorials, able to create simple Responsive Web Designs (RWD) and develop games using Javascript.</p>
-                    </div>
-                    <div class = "card">
-                        <h4>Flask / FastAPI</h4>
-                        <p>Learning how to connect front-end and back-end using Flask and FastAPI, currently exploring more advanced techniques.</p>
-                    </div>
-                </div>
-                <div style = "display: flex">
-                    <div class = "card">
-                        <h4>Database</h4>
-                        <p>Able to use basic MySQL syntax to manipulate databases, typically using SQLite in Python programs, and have personal projects.</p>
-                    </div>
-                    <div class = "card">
-                        <h4>AIoT</h4>
-                        <p>Have a basic understanding of Arduino, ESP32, and Raspberry Pi, capable of connecting hardware, sensors, server, and user devices, and applying AI technology to complete AIoT projects.</p>
-                    </div>
-                </div>
-                <div style = "display: flex">
-                    <div class = "card">
-                        <h4>Machine Learning</h4>
-                        <p>Understand the concepts of machine learning, with a basic knowledge of models such as random forest, CNN, and LSTM.</p>
-                    </div>
-                    <div class = "card">
-                        <h4>Nature Language Processing</h4>
-                        <p>This is my primary research area, including semantic recognition, information retrieval, and using the RAG framework to control LLM responses. I hope to continue researching in NLP.</p>
-                    </div>
-                </div>
-            </div>
-            <div class = "about">
-                <h2 id = "project">Project</h2>
-                <ul>
-                    <li>Personal Website ( 2023 ~ ) :<br><br>
-                        Happy
-                    </li>
-                    <li>Slime and Ghost ( 2023 ) :</li>
-                    <li>Light novel DBMS ( 2023 ~ 2024 ) :</li>
-                    <li>Foreigner Legal QA System ( 2024 ) :</li>
-                    <li>AIoT project ( 2024 ) :</li>
-                    <li>Circuit Simulator ( 2024 ) :</li>
-                </ul>
-            </div>
-            <div class = "about">
-                <h2 id = "link">Link</h2>
-                <p>友站連結</p>
-                <ul>
-                    <li><a href = "https://hackmd.io/@baiyanchen8">牛頓力學大大</a></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <p>推薦網站</p>
-                <ul>
-                    <li><a href = "https://igouist.github.io/">伊果的沒人看筆記本</a></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+            <img src = "http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=FengDian-Su&theme=swift" style = "width: 805px;">
+        </div>
+        <div class="project-container">
+            <h2 style = "font-size: 26px; margin-top: 50px" id="project">Project</h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/FengDian-Su/Cross-Lingual-LegalQA-tw">Cross-Lingual LegalQA-tw</a>
+                    <p>This study enhances cross-lingual information retrieval by applying LLM reranking, improving performance by 82% compared to the original methods, and utilizes retrieval-augmented generation for more accurate responses.</p>
+                </li>
+                <li>
+                    <a href="https://github.com/FengDian-Su/Light-Novel-DBMS">Light Novel Database Management System</a>
+                    <p>We developed a light novel-focused database management system using SQLite and Flask. This system provides users with an efficient and user-friendly platform for managing and accessing light novel data.</p>
+                </li>
+                <li>
+                    <a href="https://github.com/FengDian-Su/Smart-Menter">Smart Menter For Household Appliances</a>
+                    <p>We implemented an intelligent power monitoring system for users' homes using AIoT technology. Providing real-time electricity data and cost forecasts on a web interface through power measurements and backend data analysis.</p>
+                </li>
+                <li>
+                    <a href="https://github.com/Edmond-Yang/Cryptology_QR-code">QR-code Secret Sharing</a>
+                    <p>Based on Shamir's secret sharing technique, we implemented a feature that hides plaintext within a QR code. Users must gather a specified number of participants to retrieve the actual message.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="contact-container">
+            <h2 style = "font-size: 26px; margin-top: 0px" id="contact">Contact</h2>
+            <div class="image-gallery">
+                <img src="image/github_icon.png" alt="圖片 1" class = "info-icon">
+                <img src="image/dc_icon.jpg" alt="圖片 2"  class = "info-icon">
+                <img src="image/fb_icon.jpg" alt="圖片 3"  class = "info-icon">
+                <img src="image/ig_icon.png" alt="圖片 4"  class = "info-icon">
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+    </main>
 </body>
-
 </html>
