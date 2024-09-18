@@ -5,60 +5,21 @@
     <meta name = "viewport" content = "width = device-width, initial-scale=1.0">
     <title>NJ Blog</title>
     <link rel = "stylesheet" href = "style.css">
-    <link href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel = 'stylesheet'>
 </head>
 <body>
-    <div class = "container">
-        <div class = "sidebar">
-            <div class = fixed-sidebar>
-                <div class = "avatar">
-                    <img src = "./image/avatar.jpg">
-                </div>
-                <h3>Feng Dian Su ( NJ )</h3>
-                <ul class = "list">
-                    <li><a href = "index.html" style = "padding-right: 137px">About Me</a></li>
-                    <li><a href = "blog.html" style = "padding-right: 178px">Blog</a></li>
+    <iframe id = "myIframe" src = "https://nj-blog.super.site/" class = "blog-frame"></iframe>
+    <header style = "position: absolute; width: 100%">
+        <nav class="navbar">
+            <div class="navbar-content">
+                <button class="logo" onclick = "window.location.href='blog.html';">Blog</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#project">Project</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
-                <h3 style = "margin-left:38px;">Contact</h3>
-                <div class = "icon">
-                    <a href = "https://www.facebook.com/profile.php?id=100026887234445">
-                        <img src = "./image/fb_icon.jpg" class = "info-icon">
-                    </a><div style = "margin-left:20px;"></div>
-                    <a href = "https://www.instagram.com/sj1036813">
-                        <img src = "./image/ig_icon.png" class = "info-icon">
-                    </a><div style = "margin-left:20px;"></div>
-                    <a href = "https://www.discordapp.com/users/1015604646666043444">
-                        <img src = "./image/dc_icon.jpg" class = "info-icon">
-                    </a><div style = "margin-left:20px;"></div>
-                    <a href = "https://github.com/FengDian-Su">
-                        <img src = "./image/github_icon.png" class = "info-icon">
-                    </a>
-                </div>
             </div>
-        </div>
-        
-        <div class = "content-blog">
-            <iframe id = "myIframe" src = "https://nj-blog.super.site/" style = "height:680px;width:100%;border:none;"></iframe>
-        </div>
-    </div>
-    <!-- <script src="script.js"></script> -->
-    <!-- <script>
-        function loadPage(url) {
-            var iframe = document.getElementById('myIframe');
-            iframe.src = "https://nj-blog.super.site/";/*"".concat("https://",url);*/
-        }
-    </script> -->
+        </nav>
+    </header>
 </body>
 </html>
-
-<!--
-    <script src = "https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        function showmd(filename){
-            fetch(filename)
-                .then(response => response.text())
-                .then(data => document.getElementById('article').innerHTML = marked.parse(data))
-                .catch(error => console.error('Error:', error));
-        }
-    </script>
- -->
