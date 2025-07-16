@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NJ / Homepage</title>
+<style>
+  /* Reset some default */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #333;
+    background-color: #fff;
+  }
+
+  /* Navigation bar */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;        /* 讓 header 撐滿整個寬度 */
+  z-index: 100;       /* 高於 iframe，確保能蓋住 */
+}
+
+    .header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem 1.5rem 1.1rem; /* 控制高度與左右邊距 */
+    }
+
+    .header-inner h1 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+    color: #666;
+    }
+
+    .header-inner h1 strong {
+    color: #555;
+    }
+
+    .header-inner nav {
+    margin-left: auto;
+    }
+
+    .header-inner nav a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    }
+
+.header-inner a {
+    color: #666;
+    text-decoration: none;
+}
+
+    .header-inner a:hover {
+        color: #666;
+        text-decoration: underline;
+    }
+
+
+
+  header h1 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+    color: #666;
+  }
+
+  header h1 strong {
+    color: #555;
+  }
+
+  nav {
+    margin-left: auto;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+nav a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+  /* Main container */
+  main {
+    display: flex;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  /* Sidebar */
+  aside {
+    flex: 0 0 240px;
+    max-width: 240px;
+    margin-right: 2rem;
+  }
+
+    .profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff; /* 內層白色框 */
+    box-shadow: 0 0 0 1px #eee; /* 外層灰色環 */
+    display: block;
+    margin-bottom: 1rem;
+    }
+
+  .name {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #555;
+  }
+
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-list li svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.6rem;
+    fill: #555;
+    flex-shrink: 0;
+  }
+
+  /* Main content */
+  section.content {
+    flex: 1 1 auto;
+  }
+
+  section.content h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+
+    section.content p {
+    margin: 0.4rem 0;  /* top & bottom 都改成 0.4rem */
+    line-height: 1.5;
+    font-size: 1rem;
+    }
+
+
+  section.content a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+
+  section.content a:hover {
+    text-decoration: underline;
+  }
+
+  /* News list */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem; /* 控制每條 news 間距 */
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1rem;
+}
+
+.news-date {
+  width: 7rem;
+  font-weight: 550;
+  color: #555;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  line-height: 1.8;
+  vertical-align: middle;
+}
+
+.news-text {
+  flex: 1;
+  color: #333;
+}
+
+section.content p,
+.news-text {
+  text-align: justify;
+  line-height: 1.7rem;
+}
+
+.blog-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;        /* 螢幕寬度 */
+  height: 100vh;       /* 螢幕高度 */
+  border: none;
+  z-index: 0;          /* 確保它在 header 之下 */
+}
+
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+      margin: 1rem auto;
+      padding: 0 1rem;
+    }
+
+    aside {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      max-width: none;
+      flex: none;
+      text-align: center;
+    }
+
+    .profile-pic {
+      margin: 0 auto 1rem;
+    }
+
+    .contact-list {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 400px) {
+    nav a {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+</head>
+<body>
+    
+<header>
+  <div class="header-inner">
+    <h1><a href="index.html"><strong>NJ</strong> / FengDian Su</a></h1>
+    <nav>
+      <a href="profile.html">Profile</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+    <iframe id = "myIframe" src = "https://nj-blog.super.site/" class = "blog-section"></iframe>
+</main>
+</body>
+</html>

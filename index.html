@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NJ / Homepage</title>
+<style>
+  /* Reset some default */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #333;
+    background-color: #fff;
+  }
+
+  /* Navigation bar */
+    header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    }
+
+    .header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem 1.5rem 1.1rem; /* 控制高度與左右邊距 */
+    }
+
+    .header-inner h1 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+    color: #666;
+    }
+
+    .header-inner h1 strong {
+    color: #555;
+    }
+
+    .header-inner nav {
+    margin-left: auto;
+    }
+
+    .header-inner nav a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    }
+
+.header-inner a {
+    color: #666;
+    text-decoration: none;
+}
+
+    .header-inner a:hover {
+        color: #666;
+        text-decoration: underline;
+    }
+
+
+
+  header h1 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+    color: #666;
+  }
+
+  header h1 strong {
+    color: #555;
+  }
+
+  nav {
+    margin-left: auto;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+nav a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+  /* Main container */
+  main {
+    display: flex;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  /* Sidebar */
+  aside {
+    flex: 0 0 240px;
+    max-width: 240px;
+    margin-right: 2rem;
+  }
+
+    .profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff; /* 內層白色框 */
+    box-shadow: 0 0 0 1px #eee; /* 外層灰色環 */
+    display: block;
+    margin-bottom: 1rem;
+    }
+
+  .name {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #555;
+  }
+
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-list li svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.6rem;
+    fill: #555;
+    flex-shrink: 0;
+  }
+
+  /* Main content */
+  section.content {
+    flex: 1 1 auto;
+  }
+
+  section.content h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+
+    section.content p {
+    margin: 0.4rem 0;  /* top & bottom 都改成 0.4rem */
+    line-height: 1.5;
+    font-size: 1rem;
+    }
+
+
+  section.content a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+
+  section.content a:hover {
+    text-decoration: underline;
+  }
+
+  /* News list */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem; /* 控制每條 news 間距 */
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1rem;
+}
+
+.news-date {
+  width: 7rem;
+  font-weight: 550;
+  color: #555;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  line-height: 1.8;
+  vertical-align: middle;
+}
+
+.news-text {
+  flex: 1;
+  color: #333;
+}
+
+section.content p,
+.news-text {
+  text-align: justify;
+  line-height: 1.7rem;
+}
+
+
+
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+      margin: 1rem auto;
+      padding: 0 1rem;
+    }
+
+    aside {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      max-width: none;
+      flex: none;
+      text-align: center;
+    }
+
+    .profile-pic {
+      margin: 0 auto 1rem;
+    }
+
+    .contact-list {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 400px) {
+    nav a {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1><a href="index.html"><strong>NJ</strong> / FengDian Su</a></h1>
+    <nav>
+      <a href="profile.html">Profile</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <aside>
+    <img
+      src="nj.jpg"
+      alt="Sizhe An"
+      class="profile-pic"
+      loading="lazy"
+    />
+    <div class="name">FengDian Su ( NJ )</div>
+    <div class="title">Graduate Student</div>
+    <ul class="contact-list" aria-label="Contact information">
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+          />
+        </svg>
+        Hsinchu, TW
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+          />
+        </svg>
+        sufengdian@gmail.com
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.86 8.16 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.34-3.37-1.34-.46-1.17-1.12-1.48-1.12-1.48-.92-.63.07-.62.07-.62 1.02.07 1.56 1.05 1.56 1.05.9 1.54 2.36 1.1 2.93.84.09-.65.35-1.1.63-1.35-2.22-.26-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02a9.58 9.58 0 012.5-.34 9.56 9.56 0 012.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.4.2 2.44.1 2.7.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.68-4.57 4.94.36.31.68.93.68 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.18.59.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"
+          />
+        </svg>
+        FengDian-Su
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="#555" width="16" height="16" aria-hidden="true" style="vertical-align: middle; margin-top: 3px;">
+  <path d="M8 2v2h1v5.586L3.707 16.88A1 1 0 0 0 4.414 18h15.172a1 1 0 0 0 .707-1.707L15 9.586V4h1V2H8z"/>
+</svg>
+
+        PAIR Lab
+      </li>
+    </ul>
+  </aside>
+
+  <section class="content" aria-label="About and News">
+    <h2>About</h2>
+    <p>Hi there, this is NJ. Welcome and thanks for stopping by !</p>
+    <p>
+      I am a graduate student at the Institute of Computer Science and Engineering at 
+      </strong><a href="https://www.nycu.edu.tw/nycu/ch/index" target="_blank" rel="noopener noreferrer">National Yang Ming Chiao Tung University</a></strong>
+      , advised by </strong><a href="https://sites.google.com/view/yctseng" target="_blank" rel="noopener noreferrer">Prof. Yu-Chee Tseng</a></strong>. 
+    </p>
+    <p>
+      My previous research focuses on Natural Language Processing, exploring how we can improve RAG systems in the LegalQA domain, 
+      aiming to help LLMs generate more accurate and contextually relevant answers.
+    </p>
+    <p>
+      I have also gained hands-on experience through projects in various fields, including AIoT, databases, compilers, and cryptography,
+      as shown in my profile.
+    </p>
+    <p>
+      Feel free to contact me via 
+      </strong><a href="sufengdian@gmail.com" target="_blank" rel="noopener noreferrer">sufengdian@gmail.com</a></strong>
+       if you have any questions or needs !
+    </p>
+<div style="height: 1rem;"></div>
+    <h2>Experience</h2>
+    <div class="news-list">
+  <div class="news-item">
+    <div class="news-date">Sep 2022</div>
+    <div class="news-text">Served as a member of the Computer Science Student Association</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">Apr 2023</div>
+    <div class="news-text">Served as a core team member of Google Developer Student Clubs ( GDSC )</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">Jun 2024</div>
+    <div class="news-text">Completed my undergraduate thesis</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">Aug 2024</div>
+    <div class="news-text">The 17th ITHELP Ironman Contest 2024</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">Mar 2025</div>
+    <div class="news-text">College Student Research Scholarship National Science Committee</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">Jul 2025</div>
+    <div class="news-text">Graduated from NCHU and began my graduate studies at NYCU</div>
+  </div>
+</div>
+
+  </section>
+</main>
+</body>
+</html>
